@@ -12,11 +12,29 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [
-                    // {
-                    //     loader: "css-loader"
-                    // }
                     "style-loader",
-                    "css-loader"
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    "postcss-loader",
+                    "less=loader"
+                ]
+            },
+            {
+                test: /\.js$/i,
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            plugins: [
+                                "@babel/plugin-transform-arrow-functions",
+                                "@babel/plugin-transform-block-scoping"
+                            ]
+                    }
+                    }
                 ]
             }
         ]
