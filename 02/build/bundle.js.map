@@ -1,1 +1,19 @@
-{"version":3,"sources":["webpack://01/./src/js/format.js","webpack://01/webpack/bootstrap","webpack://01/./src/main.js"],"names":["dataFormat","date","priceFormat","price","module","exports","dateFormat","require","console","log"],"mappings":";;;;;;;;;AAAA,IAAMA,UAAU,GAAG,UAACC,IAAD,EAAU;AACzB,SAAO,YAAP;AACH,CAFD;;AAIA,IAAMC,WAAW,GAAG,UAACC,KAAD,EAAW;AAC3B,SAAO,QAAP;AACH,CAFD;;AAIAC,MAAM,CAACC,OAAP,GAAiB;AACbL,YADa;AAEbE;AAFa,CAAjB,C;;;;;;UCRA;UACA;;UAEA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;;UAEA;UACA;;UAEA;UACA;UACA;;;;;;;;;ACtBA;AACA;AACA;AAEA;AACA;AAEA;AACA;AAEA;AAEA;AACA;AACA;AAEA;AAEA,IAAM;AAAEI,YAAF;AAAcJ;AAAd,IAA8BK,mBAAO,CAAC,uCAAD,CAA3C;;AAEAC,OAAO,CAACC,GAAR,CAAYH,UAAU,CAAC,KAAD,CAAtB;AACAE,OAAO,CAACC,GAAR,CAAYP,WAAW,CAAC,KAAD,CAAvB,E","file":"bundle.js","sourcesContent":["const dataFormat = (date) => {\r\n    return '2020-12-12'\r\n}\r\n\r\nconst priceFormat = (price) => {\r\n    return '100.00'\r\n}\r\n\r\nmodule.exports = {\r\n    dataFormat,\r\n    priceFormat\r\n}","// The module cache\nvar __webpack_module_cache__ = {};\n\n// The require function\nfunction __webpack_require__(moduleId) {\n\t// Check if module is in cache\n\tvar cachedModule = __webpack_module_cache__[moduleId];\n\tif (cachedModule !== undefined) {\n\t\treturn cachedModule.exports;\n\t}\n\t// Create a new module (and put it into the cache)\n\tvar module = __webpack_module_cache__[moduleId] = {\n\t\t// no module.id needed\n\t\t// no module.loaded needed\n\t\texports: {}\n\t};\n\n\t// Execute the module function\n\t__webpack_modules__[moduleId](module, module.exports, __webpack_require__);\n\n\t// Return the exports of the module\n\treturn module.exports;\n}\n\n","// import { sum, multiply } from './js/math.js';\r\n// // const { dateFormat, priceFormat } = require('./js/format');\r\n// import \"./js/component.js\"\r\n\r\n// console.log(sum(20, 30));\r\n// console.log(multiply(20, 30));\r\n\r\n// // console.log(dateFormat(\"1213\"));\r\n// // console.log(priceFormat(\"1213\"));\r\n\r\n// const message = \"babel-test\"\r\n\r\n// const foo = (info) => {\r\n//     console.log(info)\r\n// }\r\n\r\n// foo(message)\r\n\r\nconst { dateFormat, priceFormat } = require('./js/format')\r\n\r\nconsole.log(dateFormat('abc'))\r\nconsole.log(priceFormat('abc'))"],"sourceRoot":""}
+{
+    "version": 3,
+    "sources": [
+        "webpack://01/./src/main.js",
+        "webpack://01/./src/js/math.js"
+    ],
+    "names": [
+        "console",
+        "log",
+        "num1"
+    ],
+    "mappings": "yBAyBAA,QAAQC,ICpBGC,KDqBXF,QAAQC,ICzBGC,I",
+    "file": "bundle.js",
+    "sourcesContent": [
+        "// import { sum, multiply } from './js/math.js';\r\n// // const { dateFormat, priceFormat } = require('./js/format');\r\n// import \"./js/component.js\"\r\n\r\n// console.log(sum(20, 30));\r\n// console.log(multiply(20, 30));\r\n\r\n// // console.log(dateFormat(\"1213\"));\r\n// // console.log(priceFormat(\"1213\"));\r\n\r\n// const message = \"babel-test\"\r\n\r\n// const foo = (info) => {\r\n//     console.log(info)\r\n// }\r\n\r\n// foo(message)\r\n\r\n// const { dateFormat, priceFormat } = require('./js/format')\r\n\r\n// console.log(dateFormat('abc'))\r\n// console.log(priceFormat('abc'))\r\n\r\nimport {sum, mul} from './js/math'\r\n\r\nconsole.log(mul(20, 30))\r\nconsole.log(sum(20, 30))",
+        "export const sum = (num1, num2) => {\r\n    return num1 + num2\r\n}\r\n\r\nexport const mul = (num1, num2) => {\r\n    return num1 * num2\r\n}"
+    ],
+    "sourceRoot": ""
+}
